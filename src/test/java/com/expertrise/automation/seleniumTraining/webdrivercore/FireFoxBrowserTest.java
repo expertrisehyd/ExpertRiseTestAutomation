@@ -1,26 +1,26 @@
-package com.expertrise.automation.seleniumTraining;
+package com.expertrise.automation.seleniumTraining.webdrivercore;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ChromeBrowserTest {
+public class FireFoxBrowserTest {
     public WebDriver driver;
 
     @BeforeTest
     public void setupBrowserConfiguration()
     {
-        System.out.println("Setting up Chrome Browser configuration");
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        System.out.println("Setting up fire fox  Browser configuration");
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
         driver.manage().window().maximize();
     }
 
-   @Test
-    public void launchChromeBrowser()
+    @Test
+    public void launchFireFoxBrowser()
     {
         driver.get("https://www.google.com");
         System.out.println("Title : " + driver.getTitle());
@@ -31,7 +31,7 @@ public class ChromeBrowserTest {
     public void tearDownBrowser()
     {
         if (driver != null) {
-            driver.quit();
+          //  driver.quit();
         }
     }
 }

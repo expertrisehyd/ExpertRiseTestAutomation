@@ -1,4 +1,4 @@
-package com.expertrise.automation.seleniumTraining;
+package com.expertrise.automation.seleniumTraining.webdrivercore;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
