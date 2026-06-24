@@ -6,13 +6,17 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class ScreenShotCapture {
-    public static void main(String[] args) throws InterruptedException, IOException {
+
+    @Test(groups = {"Actions"})
+    public void captureScreenShot() throws IOException {
+
         // Initiate the Webdriver
         WebDriver driver = new ChromeDriver();
         // adding implicit wait of 15 secs
@@ -29,7 +33,7 @@ public class ScreenShotCapture {
         System.out.println("Entered text is: " + text);
         // take screenshot of input box and store in project location
         File scrFile = e.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new  File("C:\\Users\\admin\\Downloads\\ImageElement.png"));
+        FileUtils.copyFile(scrFile, new File("C:\\Users\\admin\\Downloads\\ImageElement.png"));
         // Closing browser
         driver.quit();
     }

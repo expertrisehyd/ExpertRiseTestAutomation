@@ -19,7 +19,7 @@ public class FireFoxBrowserTest {
         driver.manage().window().maximize();
     }
 
-    @Test
+    @Test(groups = {"browser"})
     public void launchFireFoxBrowser()
     {
         driver.get("https://www.google.com");
