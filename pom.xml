@@ -244,6 +244,13 @@
             <version>${allure-cucumber.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+            <scope>test</scope>
+        </dependency>
+
 
         <!-- ══════════════════════════════════════════════
              ASSERTIONS — Hamcrest (EXISTING — unchanged)
@@ -376,7 +383,16 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <useModulePath>false</useModulePath>
+                  <!--  <testngXmlFiles>
+                        <testngXmlFile>allure.xml</testngXmlFile>
+                    </testngXmlFiles>-->
                 </configuration>
+            <!--    <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>allure.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>-->
+
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -442,7 +458,6 @@
                     </filesets>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>
