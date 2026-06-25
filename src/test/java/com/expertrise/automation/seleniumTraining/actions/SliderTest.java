@@ -110,7 +110,10 @@ public class SliderTest  {  // extend your base class
         System.out.println("Dragged max handle -80px to the left");
         Thread.sleep(2000);
         WebElement priceRangeText = driver.findElement(By.xpath("//label[text()='Price range:']/../input[@id='amount']"));
-        System.out.println("Updated Price Range: " + priceRangeText.getText());
+       // System.out.println("Updated Price Range: " + priceRangeText.getText());
+        String text = priceRangeText.getAttribute("value");
+        System.out.println("Value copied from firstName and pasted in to last name is --->: " + text);
+
     }
 
     // ─── HELPER 3: Move slider to a TARGET percentage using JavaScript ────────

@@ -1,4 +1,4 @@
-package com.expertrise.automation.utils.runner;
+package com.expertrise.automation.runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;

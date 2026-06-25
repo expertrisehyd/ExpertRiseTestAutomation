@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Learning selenium">
+    <!-- Parameters injected into LoginTest @Parameters("browserType","applicationUrl","userName","password") -->
+<!--    <parameter name="userName" value="expert@test.com"/>-->
+<!--    <parameter name="password" value="expert@123"/>-->
+    <test name="Group Test">
+        <groups>
+            <run>
+                <include name="browser" />
+                <exclude name="Actions" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.expertrise.automation.seleniumTraining.actions.ScreenShotCapture"/>
+            <class name="com.expertrise.automation.seleniumTraining.webdrivercore.FirstProgram"/>
+
+        </classes>
+    </test>
+</suite>
+
