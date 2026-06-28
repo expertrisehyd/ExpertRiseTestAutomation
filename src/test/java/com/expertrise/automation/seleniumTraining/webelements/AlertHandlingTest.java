@@ -1,5 +1,4 @@
 package com.expertrise.automation.seleniumTraining.webelements;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
